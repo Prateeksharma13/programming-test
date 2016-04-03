@@ -1,0 +1,41 @@
+
+@import url(//fonts.googleapis.com/css?family=Lato:700);
+
+.welcome {
+	margin:0;
+	font-family:'Lato', sans-serif;
+	color: #000;
+}
+a, a:visited {
+	text-decoration:none;
+}
+
+h1 {
+	font-size: 32px;
+	margin: 16px 0 0 0;
+}
+
+img {
+	height: 10%;
+	width: 10%;
+}
+.form-group {
+	color:#f2f2f2;
+}
+label{
+	font-weight: 200;
+}
+
+.loader {
+    border: 7px solid #f3f3f3; /* Light grey */
+    border-top: 7px solid red; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
