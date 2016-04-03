@@ -1,6 +1,8 @@
 <?php 
 
 //Parent class starts here
+
+
 class PersonBase {
 
 	public $age;     
@@ -11,7 +13,7 @@ class PersonBase {
 		return $this->height;
 	}
 
-	public function getHeight() {
+	private function getHeight() {
 		if ($height == 0) {
         	throw new Exception('Oops! Looks like the height is zero');
 		} 
@@ -27,7 +29,7 @@ class PersonBase {
 	public function saySomething() {
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, 'https://baconipsum.com/api/?type=all-meat&sentences=1&start-with-lorem=1');
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);   // this is to avoid return of the default message
 		$message = curl_exec($ch);
 		curl_close($ch);
 		return $message;
@@ -45,5 +47,7 @@ class Person extends PersonBase {
 
 }
 
+
+	
 
 ?>
